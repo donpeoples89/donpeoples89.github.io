@@ -1,3 +1,7 @@
-@media (min-width: 200px) and (max-width: 767px) {
-
+@media (max-width: 411px) {
+body {
+    background-image: url("../images/portfolio-picture.jpg");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;   
+    }
 }

@@ -1,6 +1,7 @@
 @media (min-width:992px) {
-    img.header-image {
-        display: none;
-
+    body {
+        background-image: url("../images/profile-tablet-picture.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%, 100%;
     }
 }

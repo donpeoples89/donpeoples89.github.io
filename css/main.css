@@ -1,29 +1,105 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Scope+One");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Scope+One|Roboto+Slab:300");
 @media (max-width: 411px) {
-  body {
+  header {
     background-image: url("../images/portfolio-picture.jpg");
     background-size: 100%, 100%;
     background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(169, 169, 169, 0.54);
+    text-align: center;
+  }
+
+  nav ul {
+    height: 100%;
+  }
+
+  nav li {
+    height: 25%;
+    text-align: center;
+    position: relative;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  p {
+    padding: 20px;
+    line-height: 2rem;
   }
 }
-@media (min-width: 412px) and (max-width: 991px) {
+@media (min-width: 412px) and (max-width: 912px) {
   img.header-image {
     display: none;
   }
 
   header {
-    margin: 50px;
     background-image: url("../images/profile-tablet-picture.jpg");
     background-repeat: no-repeat;
     background-size: 100%, 100%;
-    height: 200px;
+    background-color: rgba(25, 169, 229, 0.06);
+    height: 50vh;
+  }
+
+  li {
+    display: inline;
+  }
+
+  nav {
+    text-align: center;
+    display: block;
+  }
+
+  nav li a {
+    display: inline;
+    color: white;
+  }
+
+  p {
+    width: 80%;
+    line-height: 2.5rem;
+    text-align: center;
+    margin: 25px auto;
   }
 }
-@media (min-width: 992px) {
-  body {
+@media (min-width: 913px) {
+  img.header-image {
+    display: none;
+  }
+
+  header {
     background-image: url("../images/profile-tablet-picture.jpg");
     background-repeat: no-repeat;
     background-size: 100%, 100%;
+    height: 100vh;
+  }
+
+  li {
+    display: inline;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav li a {
+    display: inline;
+    color: black;
   }
 }
 /* Global Styles--
@@ -38,18 +114,30 @@ body {
 }
 
 h1 {
-  font-size: 0.9rem;
-  text-align: right;
+  font-size: 0.8rem;
 }
 
-h2 {
-  font-size: 1.5rem;
+header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+p {
+  text-align: justify;
+  font-family: "Roboto Slab";
+  color: black;
+}
+
+#bio {
+  padding: 10px;
 }
 
 .name {
   font-size: 1.5rem;
-  display: block;
-  text-align: right;
+}
+
+.name, h1, h2 {
+  padding-right: 30px;
 }
 
 .flex-container {
@@ -77,48 +165,32 @@ span {
   text-align: right;
 }
 
-nav {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: none;
-  background-color: rgba(169, 169, 169, 0.54);
-  text-align: right;
+form {
+  margin-top: 100px;
 }
 
-nav li {
-  height: 25%;
-  text-align: center;
-  position: relative;
+label {
+  margin: 40px;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: white;
-  display: block;
-  font-size: 20px;
-  position: relative;
-  top: 50%;
-}
-
-nav ul {
-  padding: 0px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  margin: 5px;
 }
 
 nav li:hover {
   background-color: rgba(169, 169, 169, 0.75);
 }
 
-#contact label, #contact li, #contact input {
+form {
+  padding-left: 40px;
+}
+
+form label, form input {
   display: block;
-  width: 80%;
-  margin: 0 auto;
+}
+
+form label {
+  margin: 0;
 }
 
 /* Following Styles Are For
@@ -130,28 +202,20 @@ textarea#message {
   margin: 5px auto 10px auto;
 }
 
-section#about {
-  height: auto;
-  overflow: auto;
-  margin: 10px;
+#bio, #portfolio, #contact {
+  height: 100vh;
 }
 
-footer {
-  background-color: black;
-  height: 20px;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  margin: 0;
+#portfolio {
+  background-color: white;
 }
 
-input {
-  height: 30px;
+#bio {
+  background-color: rgba(25, 169, 229, 0.06);
 }
 
-form {
-  padding-bottom: 13px;
-  margin-bottom: 10px;
+#contact {
+  background-color: #3C3C3B;
 }
 
 a {

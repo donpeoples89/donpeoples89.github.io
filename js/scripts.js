@@ -3,3 +3,11 @@ $(".header-image").on("click", function () {
 });
 
 
+const portfolio = document.getElementById("contact");
+
+const stuff = portfolio.getBoundingClientRect();
+console.log(stuff);
+
+
+
+
